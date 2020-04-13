@@ -7,7 +7,7 @@ def piglatinize(word) #pig latinizes a single word
    else
     vowel_index = word.index(/[aeiou]/)
     front_end = word.slice!(0..vowel_index-1)
-   front_end+ word+"ay"
+    word + front_end +"ay"
   end
 end
  
