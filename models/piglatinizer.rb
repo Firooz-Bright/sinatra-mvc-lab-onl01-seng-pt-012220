@@ -10,10 +10,7 @@ def piglatinize(word) #pig latinizes a single word
     word + front_end +"ay"
   end
 end
-
-   new_word
- end 
-     
+ 
 end
 
 def to_pig_latin(phrase)
