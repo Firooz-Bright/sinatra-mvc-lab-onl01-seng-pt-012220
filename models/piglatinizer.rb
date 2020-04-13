@@ -11,7 +11,6 @@ def piglatinize(word) #pig latinizes a single word
   end
 end
  
-end
 
 def to_pig_latin(phrase)
   word_array = phrase.split(" ")
