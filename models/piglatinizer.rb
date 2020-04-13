@@ -2,19 +2,15 @@ class PigLatinizer
   attr_accessor :piglatinized_phrase
 
 def piglatinize(word) #pig latinizes a single word
-   
-   vowel = word.scan(/[aeoui]/)
-   
-   if word.split.first==vowel 
-     word+ "way"
+  if word.downcase.index(/[aeiou]/) == 0
+    word + "way"
    else
-     word.split.each do |letter|
-       if letter != vowel
-      back_end+=letter
-    elsif letter==vowel
-     new_word+= letter + back_end+"ay"
-    end 
-  end 
+    vowel_index = word.index(/[aeiou]/)
+    front_end = word.slice!(0..vowel_index-1)
+    word + front_end +"ay"
+  end
+end
+
    new_word
  end 
      
